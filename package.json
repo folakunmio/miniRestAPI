@@ -1,8 +1,27 @@
 {
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "node-fetch": "^2.7.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "minirestapi",
+  "description": "A simple REST API built with Node.js and Express.js.",
+  "version": "1.0.0",
+  "main": "express_api_server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/folakunmio/miniRestAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/folakunmio/miniRestAPI/issues"
+  },
+  "homepage": "https://github.com/folakunmio/miniRestAPI#readme"
 }

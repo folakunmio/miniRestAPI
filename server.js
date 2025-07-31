@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const fetch = require('node-fetch');
 
 app.use(express.json());
 
@@ -68,6 +69,18 @@ app.delete('/items/:id', (req, res) => {
   if (index === -1) return res.status(404).json({ message: 'Item not found' });
   const deleted = items.splice(index, 1)[0];
   res.json(deleted);
+});
+
+// GET /external-items - fetch data from external API
+app.get('/external-items', async (req, res, next) => {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    if (!response.ok) throw new Error('Failed to fetch external data');
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    next(err);
+  }
 });
 
 // Global error handler
