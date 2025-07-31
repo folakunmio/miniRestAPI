@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from './ItemList';
+import MyItemsManager from './MyItemsManager';
 import './App.css';
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
       ) : (
         <ItemList items={filteredItems} />
       )}
+      <MyItemsManager />
     </div>
   );
 }
