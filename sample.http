@@ -1,0 +1,29 @@
+### Root
+GET http://localhost:3000/
+
+### Get all items
+GET http://localhost:3000/items
+
+### Create item
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+  "name": "Test Item",
+  "description": "A sample item."
+}
+
+### Get item by ID
+GET http://localhost:3000/items/1
+
+### Update item
+PUT http://localhost:3000/items/1
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "description": "Updated description."
+}
+
+### Delete item
+DELETE http://localhost:3000/items/1
